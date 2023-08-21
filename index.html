@@ -17,18 +17,19 @@
 </head>
 
 <body>
-    <header class="bg-[#F9F6E2] h-[600px] w-full">
+    <header class="bg-[#F9F6E2] h-[600px] md:h-[410px] lg:h-[600px] w-full">
         <div class="hero ">
-            <div class="hero-content  flex-col lg:flex-row">
+            <div class="hero-content  flex-col md:flex-row lg:flex-row">
                 <div class="text-center">
                     <p class="font-medium text-[32px] mb-7">---SALE FEVER---</p>
-                    <h1 class="font-bold text-[50px] mb-7">Purchase TK 200 or <br> above & get <span
-                            class="text-[#E527B2]">20%
+                    <h1
+                        class="font-medium lg:leading-normal md:semibold lg:font-bold text-xl md:text-3xl lg:text-[50px] mb-7">
+                        Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20%
                             off</span></h1>
                     <p class="text-base font-medium ">
                         Use Promo Code
-                        <button class="btn bg-[#E527B2]  border-none text-white font-semibold text-base">Get
-                            Started</button>
+                        <button class="btn bg-[#E527B2]  border-none text-white font-semibold text-base">SELL200
+                        </button>
                     </p>
 
                 </div>
@@ -44,7 +45,7 @@
                 <div class="col-span-3">
                     <!-- section-1  -->
                     <section class=" pt-20    ">
-                        <h1 class="text-[40px] font-semibold">Kitchenware</h1>
+                        <h1 class="text-[40px] pb-7 font-semibold">Kitchenware</h1>
                         <div class="grid lg:grid-cols-3 md:grid-cols-2  gap-10">
                             <!-- card-1  -->
                             <div id="card1" class="card  bg-base-100 shadow-xl">
@@ -64,7 +65,7 @@
                                             <span class="text-[#FFC107] fa fa-regular fa-star text-2xl"></span>
                                         </p>
                                     </div>
-                                    <h2 id="s1c1t" class="card-title">K. Accessories</h2>
+                                    <h2 id="s1c1t" class="card-title">K. Accessorie</h2>
                                     <h4 id="s1c1">39.00 TK</h4>
                                 </div>
                             </div>
@@ -117,7 +118,7 @@
                     </section>
                     <!-- section-2  -->
                     <section class="  pt-20   ">
-                        <h1 class="text-[40px] font-semibold">Sportswear</h1>
+                        <h1 class="text-[40px] pb-7 font-semibold">Sportswear</h1>
                         <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
                             <!-- card-1  -->
                             <div id="card4" class="card  bg-base-100 shadow-xl">
@@ -186,7 +187,7 @@
                     </section>
                     <!-- section-3  -->
                     <section class=" pb-28  pt-20  ">
-                        <h1 class="text-[40px] font-semibold">Kitchenware</h1>
+                        <h1 class="text-[40px] pb-7 font-semibold">Kitchenware</h1>
                         <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
                             <!-- card-1  -->
                             <div id="card7" class="card   bg-base-100 shadow-xl">
@@ -259,11 +260,12 @@
                     </section>
 
                 </div>
-                <div class="col-span-1 mt-36">
+                <div class="col-span-1  mt-[50px] md:mt-[172px] lg:mt-[172px]">
                     <div class="bg-white rounded-lg ">
                         <h1 class="mb-7 font-medium text-2xl pt-4 text-center">Have coupon?</h1>
                         <div class="join p-4">
-                            <input class="input input-bordered w-40 join-item items-center" placeholder="Coupon code" />
+                            <input class="input input-bordered w-40 md:w-[10px] lg:w-40 join-item items-center"
+                                placeholder="Coupon code" />
                             <button class="btn  bg-[#E527B2] text-base font-semibold text-white ">Apply</button>
                         </div>
                     </div>
@@ -273,17 +275,18 @@
                             <li id="textArea1" class="pt-4 font-bold "></li>
                         </ol>
                         <hr>
-                        <h1 class="font-bold" >
-                            Total Price:<span class="font-normal" id="textArea2"></span>
+                        <h1 class="font-bold">
+                            Total :<span class="font-normal" id="textArea2"></span>
                         </h1>
                         <h4 class="font-bold">Discount : <span class="font-normal" id="textArea3"></span></h4>
-                        <h4 class="font-bold">Total : <span class="font-normal" id="textArea4"></span></h4>
+                        <h4 class="font-bold">Total Price: <span class="font-normal" id="textArea4"></span></h4>
                         <hr>
                     </div>
-                    
+
                     <div class="">
 
-                        <button class="btn bg-[#E527B2] text-white -mt-11 w-full text-base font-semibold">Make
+                        <button id="purchase-btn"
+                            class="btn bg-[#E527B2] text-white -mt-11 w-full text-base font-semibold">Make
                             Purchase</button>
                     </div>
                 </div>
