@@ -264,9 +264,11 @@
                     <div class="bg-white rounded-lg ">
                         <h1 class="mb-7 font-medium text-2xl pt-4 text-center">Have coupon?</h1>
                         <div class="join p-4">
-                            <input class="input input-bordered w-40 md:w-[10px] lg:w-40 join-item items-center"
+                            <input id="input-apply"
+                                class="input input-bordered w-40 md:w-[10px] lg:w-40 join-item items-center"
                                 placeholder="Coupon code" />
-                            <button class="btn  bg-[#E527B2] text-base font-semibold text-white ">Apply</button>
+                            <button id="btn-apply"
+                                class="btn  bg-[#E527B2] text-base font-semibold text-white ">Apply</button>
                         </div>
                     </div>
                     <div class="py-8 px-4 mt-6 bg-white rounded-lg ">
@@ -276,21 +278,37 @@
                         </ol>
                         <hr>
                         <h1 class="font-bold">
-                            Total :<span class="font-normal" id="textArea2"></span>
+                            Total :<span class="font-normal" id="textArea2">00</span>
                         </h1>
-                        <h4 class="font-bold">Discount : <span class="font-normal" id="textArea3"></span></h4>
-                        <h4 class="font-bold">Total Price: <span class="font-normal" id="textArea4"></span></h4>
+                        <h4 class="font-bold">Discount : <span class="font-normal" id="textArea3">00</span><span></span>
+                        </h4>
+                        <h4 class="font-bold">Total Price: <span class="font-normal" id="textArea4">00</span></h4>
                         <hr>
                     </div>
 
                     <div class="">
 
-                        <button id="purchase-btn"
-                            class="btn bg-[#E527B2] text-white -mt-11 w-full text-base font-semibold">Make
+                        <button id="purchase-btn" onclick="my_modal_1.showModal()"
+                            class="btn bg-[#E527B2] text-white  -mt-11 w-full text-base font-semibold">Make
                             Purchase</button>
+                        <!-- Open the modal using ID.showModal() method -->
+                        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box  ">
+                                <img class="pl-40" src="/congo.png" alt="">
+                                <h3 class="font-bold text-4xl pl-24 font-center">Congratulations</h3>
+                                <p class="py-4 pl-[140px]">Your Purchase the product</p>
+                                <div class="modal-action align-center mr-[190px]">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button id="btn-home"
+                                        class="btn  bg-[#E527B2]  text-base font-semibold text-white ">Home</button>
+                                </div>
                     </div>
+                    </form>
+                    </dialog>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 

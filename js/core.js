@@ -1,3 +1,6 @@
+const textArea2 = document.getElementById('textArea2');
+const textArea3 = document.getElementById('textArea3');
+const textArea4 = document.getElementById('textArea4');
 document.addEventListener('DOMContentLoaded', function () {
     const selectedCards = []; // Array to store selected cards
 
@@ -8,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let discount = 0
         for (const card of selectedCards) {
             totalAmount += card.price * card.quantity;
-            console.log(totalAmount);
+            // console.log(totalAmount);
             cardCounts[card.name] = cardCounts[card.name] ? cardCounts[card.name] + 1 : 1;
 
             total = totalAmount
@@ -16,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(total);
             if (totalAmount >= 200) {
                 total = totalAmount - (totalAmount * 20 / 100)
-                discount = (totalAmount * 20 / 100)
+                // discount = (totalAmount * 20 / 100)
 
             }
             else {
@@ -66,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         updateSelectedCards();
         butttonDisable()
+        butttonDisable2()
     }
     // card 1
     document.getElementById('card1').addEventListener('click', function () {
@@ -123,21 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
         cardClickHandler(this, card9prise, card9item);
     });
 });
-
-// document.getElementById('purchase-btn').document.addEventListener('click', function () {
-// // console.log('clicked');
-// const buttonvalue = document.getElementById('textArea4')
-// var inputValue = buttonvalue.innerText;
-// var buttonman = parseFloat(inputValue)
-// var button = document.getElementById('purchase-btn');
-
-// if (inputValue >= 200) {
-//     button.disabled = false;
-
-// } else {
-//     button.disabled = true;
-// }
-// })
+// button disable  purches
 function butttonDisable() {
     const button = document.getElementById('purchase-btn')
     const buttonvalue = document.getElementById('textArea2')
@@ -153,3 +143,33 @@ function butttonDisable() {
 
 }
 butttonDisable()
+// button disable in apply 
+function butttonDisable2(){
+
+    const button2 = document.getElementById('btn-apply')
+    const button2value = document.getElementById('textArea2')
+    var inputValue2 = button2value.innerText || 0;
+    var inputValue22 = parseFloat(inputValue2)
+    if (inputValue22 >= 200) {
+        button2.disabled = false;
+
+    } else {
+        button2.disabled = true;
+    }
+}
+butttonDisable2()
+
+document.getElementById('btn-apply').addEventListener('click', function () {
+    const inputvallu = document.getElementById('input-apply')
+    const inputvalluCupon =inputvallu.value
+    if(inputvalluCupon ==  'SELL200'){
+        discount = (parseFloat(textArea2.innerText) * 20 / 100)
+        console.log(discount);
+        textArea3.innerText = ` ${discount.toFixed(2)}TK`;
+        
+    }
+    
+})
+document.getElementById('btn-home').addEventListener('click', function (){
+    window.location.href = "index.html"
+})
